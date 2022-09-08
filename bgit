@@ -119,8 +119,8 @@ function bgit() {
                 tput bold & tput setaf 7
 
                 if [[ $newfiles || $modified ]] ; then
-                    gi/.config/bgit credential.helper 'cache --timeout=3600';
-                    gi/.config/bgit advice.addEmptyPathspec false;
+                    git config credential.helper 'cache --timeout=3600';
+                    git config advice.addEmptyPathspec false;
                     git add $modified $newfiles > /dev/null 2>&1
                 fi
 
