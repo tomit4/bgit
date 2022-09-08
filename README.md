@@ -12,7 +12,7 @@ I'll write a more extensive Use Manual here later, but for now you can simply us
 
 `bgit`
 
-This will initialize a series of prompts if there is a git repository in your current working directory and prompt you by showing you what files are being added/modified/deleted. It will also prompt you for gitmojis(optional), commit messages, and passwords.
+This will initialize a series of prompts if there is a git repository in your current working directory and prompt you by showing you what files are being added/modified/deleted. It will also prompt you for gitmojis(optional), commit messages, and passwords(it actually saves your password for one hour, but this doesn't apply to personal access tokens nor ssh keys).
 
 NOTE: Keep in mind that this script silences most error messages, so it's best to check your repository when using this script (at least when first using it to be sure).
 
