@@ -29,6 +29,8 @@ That's it for now. This is a personal project by a bash scripting noob, so I dou
 __Project Checklist:__
 
 - [x] Initial Commit
+- [ ] Add support for gitlab-cli in init (and eventual delete) script(s)
+- [ ] Add a -d Flag/bgit_delete file that will tear down entire local repo (will also delete github repos remotely via cli)
 - [ ] Create a --help Flag feature/message
 - [ ] Organize files so that they source from a common directory (i.e $HOME/config)
 - [ ] Update README to include usage/configuration as well as examples/pics/gifs
