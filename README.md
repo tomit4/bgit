@@ -34,3 +34,8 @@ __Project Checklist:__
 - [ ] Create a --help Flag feature/message
 - [ ] Organize files so that they source from a common directory (i.e $HOME/config)
 - [ ] Update README to include usage/configuration as well as examples/pics/gifs
+
+__Considered Features:__
+- [ ] Separate out basic javascript project into another project bnpm_init
+- [ ] Within this basic javascript project, consider adding react/vue basic projects
+- [ ] Address also adding nodejs/express/nginx/apache to set up a basic html server out of the box
