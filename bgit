@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# so far requires gitmojis (txt file) and also
-# bgit_gitmoji for function echomoji() that displays gitmojis in terminal and also
-# bgit_init for function b_init()
-
 # Error handling
 set -e
 # For styling/colorizing output
