@@ -24,7 +24,7 @@ function b_revert() {
         echo "${txtblue} reverting back to version: ${txtyellow}${commitarray[$version]}"
         git reset --hard ${commitarray[$version]}
         for ((i = 0; i < numrepos; i++)) ; do
-            git push --force ${remotearray[i]} ;
+            git push --force ${remotearray[i]} > /dev/null 2>&1 ;
         done
         echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
         exit 0
