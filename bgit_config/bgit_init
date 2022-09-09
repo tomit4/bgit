@@ -29,8 +29,9 @@ function b_init() {
             if [ ! -f ".gitignore" ] ; then
                 read -e -r -p "${txtblue} would you like bgit to generate a default .gitignore?(y/n): ${txtyellow}" generategitignore
                 if [[ $generategitignore == "y" || $generategitignore == "yes" ]] ; then
-                    # import function that prompts user for type of project and grabs a default gitignore
-                    echo -e "node_modules\n*.env\n*.out\n.pretterrc\n.gitignore" > .gitignore
+                    read -e -r -p "${txtblue} what programming language is this project in?(c/js/py)?: ${txtyellow}" projecttype
+                    source $HOME/.config/bgit/bgit_gitignore
+                    b_gitignore $projecttype
                 fi
             fi
 
