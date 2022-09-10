@@ -13,12 +13,10 @@ function b_revert() {
         commitarray=($(git log -$numcommits | grep commit | sed 's/commit//g'))
         verbosecommits=$(git shortlog -$numcommits --reverse | sed 1d);
 
-        tput bold & tput setaf 7
-
         for ((i = 0; i < numcommits; i++)) do
             j=$(echo ${i} + 1 | bc)
             nextcommit=$(echo "${verbosecommits}" | head -n $j | tail -n 1)
-            echo -e "${i}) ${txtyellow}${commitarray[$i]}${txtblue}${nextcommit}${txtwhite}"
+            echo -e "  ${txtblue}${i}) ${txtyellow}${commitarray[$i]}${txtblue}${nextcommit}${txtblue}"
         done
         read -e -r -p "${txtblue} choose commit to revert back to: ${txtyellow}" version
         echo "${txtblue} reverting back to version: ${txtyellow}${commitarray[$version]}"
