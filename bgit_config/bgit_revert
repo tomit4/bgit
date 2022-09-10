@@ -26,7 +26,7 @@ function b_revert() {
         for ((i = 0; i < numrepos; i++)) ; do
             git push --force ${remotearray[i]} > /dev/null 2>&1 ;
         done
-        echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
+        echo "${txtblue} bgit script has completed! goodbye!${txtwhite}"
         exit 0
     else
         echo "${txtblue} no revisions to git branch have been made.${txtwhite}"
