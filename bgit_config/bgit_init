@@ -173,6 +173,7 @@ function b_init() {
                     echo '' | xclip && xclip -selection clipboard /dev/null
                 else
                     echo "${txtgreen} Git repository initiated!!${txtwhite}"
+                    echo -e "\n${txtblue} bgit script has completed! goodbye!${txtwhite}"
                 fi
 
                 break

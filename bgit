@@ -41,7 +41,7 @@ tput bold & tput setaf 7
 
 function bgit() {
     # Intro Prompt
-    echo "${txtblue} bgit: a handy shell script for git inits/commits${txtred}"
+    echo -e "${txtblue} bgit: a handy shell script for git inits/commits${txtred}\n"
 
     numrepos=$(git remote | wc -l)
     numargs="$#"
@@ -139,7 +139,7 @@ function bgit() {
                 for ((i = 0; i < numrepos; i++)) ; do
                     git push --force ${remotearray[i]} > /dev/null 2>&1;
                 done
-                echo "${txtblue} bgit script has completed! goodbye!${txtwhite}"
+                echo "\n${txtblue} bgit script has completed! goodbye!${txtwhite}"
                 exit 0
 
             elif [[ $change == "n" || $change == "no" ]] ; then
