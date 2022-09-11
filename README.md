@@ -30,6 +30,7 @@ __Project Checklist:__
 
 - [x] Initial Commit
 - [x] Organize files so that they source from a common directory (i.e $HOME/config)
-- [ ] Create install script
 - [x] Create a --help Flag feature/message
+- [ ] Create install script
+- [ ] Create a logging script (very similar to -r flag)
 - [ ] Update README to include usage/configuration as well as examples/pics/gifs
