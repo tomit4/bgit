@@ -85,13 +85,15 @@ function bgit() {
             read -e -r -p "${txtblue} commit changes?(y/n): ${txtyellow}" change
             if [[ $change == "y" || $change == "yes" ]] ; then
 
-                while true
+                mojicheck=1
+                while [ $mojicheck -gt 0 ]
                 do
                     read -e -r -p "${txtblue} add a gitmoji?(y/n/help): ${txtyellow}" gmojiprompt
                     if [[ $gmojiprompt == "y" || $gmojiprompt == "yes" ]] ; then
                         read -e -r -p "${txtblue} enter gitmoji: ${txtyellow}" gitmoji
                         gitmoji=":$gitmoji:"
-                        break
+                        source $HOME/.config/bgit/bgit_checkmoji
+                        checkmoji $gitmoji
                     elif [[ $gmojiprompt == "help" || $gmojiprompt == "h" ]] ; then
                         if command -v "bat" &> /dev/null ; then
                             bat $HOME/.config/bgit/gitmojis
@@ -100,7 +102,6 @@ function bgit() {
                             less ~/scripts/gitmojis
                         fi
                     else
-                        echo "${txtblue} no gitmoji specified...${txtwhite}"
                         gitmoji=""
                         break
                     fi
