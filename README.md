@@ -33,4 +33,5 @@ __Project Checklist:__
 - [x] Create a --help Flag feature/message
 - [ ] Create install script
 - [ ] Create a logging script (very similar to -r flag)
+- [ ] Create a barebones version of bgit without colors, suppressed output, and icons
 - [ ] Update README to include usage/configuration as well as examples/pics/gifs
