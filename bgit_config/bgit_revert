@@ -19,7 +19,7 @@ function b_revert() {
             echo -e "  ${txtblue}${i}) ${txtyellow}${commitarray[$i]}${txtblue}${nextcommit}${txtblue}"
         done
         read -e -r -p "${txtblue} choose commit to revert back to: ${txtyellow}" version
-        echo "${txtblue} reverting back to version: ${txtyellow}${commitarray[$version]}"
+        echo "${txtblue} reverting back to version: ${txtyellow}${commitarray[$version]}${txtwhite}"
         git reset --hard ${commitarray[$version]}
         for ((i = 0; i < numrepos; i++)) ; do
             git push --force ${remotearray[i]} > /dev/null 2>&1 ;
