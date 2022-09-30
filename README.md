@@ -14,6 +14,8 @@ Afterwards which simply invoke the script:
 
 `./install.sh`
 
+bgit also comes with an uninstall script, repeat the above commands above to uninstall, simply replacing 'install' with 'uninstall'.
+
 ### Basic Usage
 
 `bgit`
@@ -47,7 +49,7 @@ __Project Checklist:__
 - [x] Create a --help Flag feature/message
 - [x] Create a man page for bgit using troff
 - [x] Create install script
-- [-] Create uninstall script
+- [x] Create uninstall script
 - [x] Create a git log script (very similar to -r flag)
 - [x] Update README to include usage/configuration
 - [ ] Create a barebones version of bgit without colors, suppressed output, and icons
