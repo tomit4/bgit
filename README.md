@@ -33,6 +33,6 @@ __Project Checklist:__
 - [x] Create a --help Flag feature/message
 - [ ] Create a man page using markdown/pandoc
 - [ ] Create install script
-- [ ] Create a git log script (very similar to -r flag)
+- [x] Create a git log script (very similar to -r flag)
 - [ ] Create a barebones version of bgit without colors, suppressed output, and icons
 - [ ] Update README to include usage/configuration as well as examples/pics/gifs
