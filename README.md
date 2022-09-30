@@ -24,7 +24,7 @@ Invoking bgit without any arguments will automatically prompt the user to stage 
 
 `bgit -i`
 
-Invoking bgit with the -i flag will prompt the user to initialize a new local git repository and proceeds to set up some sane defaults while attempting to not be too opinionated about it. This init script prompts the user if they'd like to set up a very bare bones README.md, a default .gitignore [^1], as well as a default LICENCE [^2]. The script will also create the initial commit for the project and push it to whatever repository the user inputs. Additionally, if the project is to be pushed to Github, the repository can be initiated remotely utilizing the github-cli (this feature may soon be deprecated depending on the decisions made by Github).
+Invoking bgit with the -i flag will prompt the user to initialize a new local git repository and proceeds to set up some sane defaults while attempting to not be too opinionated about it. This init script prompts the user if they'd like to set up a very bare bones README, a default .gitignore [^1], as well as a default LICENCE [^2]. The script will also create the initial commit for the project and push it to whatever repository the user inputs. Additionally, if the project is to be pushed to Github, the repository can be initiated remotely utilizing the github-cli (this feature may soon be deprecated depending on the decisions made by Github).
 
 `bgit -l`
 
@@ -41,6 +41,10 @@ Invoking bgit with the -h flag will provide the user with a standard help page a
 ### A Brief Note on DevIcons/Colors
 
 bgit makes heavy use of emojis in its prompts as well as colors displayed by invoking tput. If you have previously installed devicons and have a terminal emulator capable of displaying UTF-8 characters, then the script should display these with no problem [^3].
+
+### Required and Optional Dependencies
+
+bgit is a simple bash script, and thusly relies on many of the standard GNU utils, including grep, awk, tr, read, and less. bgit also relies on curl and xclip for some of its more nuanced features (like initializing a new repository on Github via the github-cli). Lastly, bgit also optionally utilizes bat and legit. Utilize your best judgement and install these various packages via your favorite package manager(s) as you see fit. Most of these packages are preinstalled on the majority of Linux Distributions and are otherwise easily installed. It goes without saying, but of course, you'll need git to use this....
 
 __Project Checklist:__
 
