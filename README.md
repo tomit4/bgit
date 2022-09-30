@@ -31,7 +31,7 @@ __Project Checklist:__
 - [x] Initial Commit
 - [x] Organize files so that they source from a common directory (i.e $HOME/config)
 - [x] Create a --help Flag feature/message
-- [ ] Create a man page using markdown/pandoc
+- [x] Create a man page for bgit using troff
 - [ ] Create install script
 - [x] Create a git log script (very similar to -r flag)
 - [ ] Create a barebones version of bgit without colors, suppressed output, and icons
