@@ -1,6 +1,6 @@
 ## bgit: a shell script to simplify the standard git workflow
 
-bgit is my personal git automation tool written in bash. It is designed to quickly automate away alot of the simple git commands that git beginners use every day. These include commands like git init, git add, git commit -m, and git push. It is a series of simple prompts that make the git workflow seamless and quick to use, so that you can quickly commit your recent version updates and move on with your day.
+bgit is a git automation tool written in bash. It is designed to quickly automate away alot of the simple git commands that git beginners use every day. These include commands like git init, git add, git commit -m, and git push. It is a series of simple prompts that make the git workflow seamless and quick to use, so that you can quickly commit your recent version updates and move on with your day.
 
 If for whatever reason you have stumbled across this project, please note that it is not quite done. However, as of right now, you can simply move the bgit executable into a directory that is within your $PATH, and move the bgit_config directory to your $HOME/.config directory and rename the bgit_config directory to bgit like so:
 
