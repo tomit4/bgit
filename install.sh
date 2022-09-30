@@ -15,6 +15,7 @@ changeowner
 
 function installbgit() {
     if [[ ! -f /usr/local/bin/bgit ]] ; then
+        echo 'installing bgit to /usr/local/bin ...'
         if command -v "doas" &> /dev/null ; then
             doas cp bgit /usr/local/bin/
             doas chmod 755 /usr/local/bin/bgit
