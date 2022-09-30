@@ -9,5 +9,4 @@ function b_help() {
     echo -e "${txtblue} bgit -l \t\t${txtgreen}prompts to show log of previous commits"
     echo -e "${txtblue} bgit -r \t\t${txtgreen}prompts to revert back to an old commit"
     echo -e "${txtblue} bgit -h \t\t${txtgreen}presents this help message"
-    echo "${txtblue} bgit script has completed! goodbye!${txtwhite}"
 }

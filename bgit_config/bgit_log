@@ -18,6 +18,5 @@ function b_log() {
         echo -e "  ${txtblue}${i}) ${txtyellow}${commitarray[$i]}${txtblue}${nextcommit}${txtblue}"
     done
 
-    echo -e "${txtblue} bgit script has completed! goodbye!${txtwhite}"
     exit 0
 }
