@@ -164,7 +164,7 @@ function bgit() {
         b_init "$@"
     fi
 
-    while getopts "irh" opt ; do
+    while getopts "irlh" opt ; do
         case $opt in
             i)
                 echo "${txtgreen} no git repository found, executing git init...${txtwhite}"
@@ -174,6 +174,10 @@ function bgit() {
             r)
                 source $HOME/.config/bgit/bgit_revert
                 b_revert "$@"
+                ;;
+            l)
+                source $HOME/.config/bgit/bgit_log
+                b_log "$@"
                 ;;
             h)
                 source $HOME/.config/bgit/bgit_help
