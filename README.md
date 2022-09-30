@@ -1,4 +1,4 @@
-## bgit: a handy shell script for simple git inits/commits
+## bgit: a shell script to simplify the standard git workflow
 
 bgit is my personal git automation tool written in bash. It is designed to quickly automate away alot of the simple git commands that git beginners use every day. These include commands like git init, git add, git commit -m, and git push. It is a series of simple prompts that make the git workflow seamless and quick to use, so that you can quickly commit your recent version updates and move on with your day.
 
