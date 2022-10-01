@@ -46,7 +46,7 @@ bgit makes heavy use of emojis in its prompts as well as colors displayed by inv
 
 ### Required and Optional Dependencies
 
-bgit is a simple bash script, and thusly relies on many of the standard GNU and Linux utils, including grep, awk, tr, read, and less, and of course git. bgit also relies on curl and xclip for some of its more nuanced features (like initializing/deleting a repository on Github via the github-cli). Lastly, bgit also optionally utilizes bat and legit. Utilize your best judgement and install these various packages via your favorite package manager(s) as you see fit. Most of these packages are preinstalled on the majority of Linux Distributions and are otherwise easily installed.
+bgit is a simple bash script, and thusly relies on many of the standard GNU and Linux utils, including echo, grep, awk, tr, read, and less, and of course git. bgit also relies on curl and xclip for some of its more nuanced features (like initializing/deleting a repository on Github via the Github API). Lastly, bgit also optionally utilizes bat and legit. Utilize your best judgement and install these various packages via your favorite package manager(s) as you see fit. Most of these packages are preinstalled on the majority of Linux Distributions and are otherwise easily installed.
 
 ### Bare Bones bgit
 
