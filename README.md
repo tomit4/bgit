@@ -46,11 +46,17 @@ bgit makes heavy use of emojis in its prompts as well as colors displayed by inv
 
 ### Required and Optional Dependencies
 
-bgit is a simple bash script, and thusly relies on many of the standard GNU and Linux utils, including grep, awk, tr, read, and less, and of course git. bgit also relies on curl and xclip for some of its more nuanced features (like initializing a new repository on Github via the github-cli). Lastly, bgit also optionally utilizes bat and legit. Utilize your best judgement and install these various packages via your favorite package manager(s) as you see fit. Most of these packages are preinstalled on the majority of Linux Distributions and are otherwise easily installed.
+bgit is a simple bash script, and thusly relies on many of the standard GNU and Linux utils, including grep, awk, tr, read, and less, and of course git. bgit also relies on curl and xclip for some of its more nuanced features (like initializing/deleting a repository on Github via the github-cli). Lastly, bgit also optionally utilizes bat and legit. Utilize your best judgement and install these various packages via your favorite package manager(s) as you see fit. Most of these packages are preinstalled on the majority of Linux Distributions and are otherwise easily installed.
 
 ### Bare Bones bgit
 
 There is a bare bones version of bgit included in this repository. This version omits colorized output, devicons, gitmojis, and does not suppress certain outputs (it also does not remember you password for an hour). To install this version of bgit, simply navigate into the bare_bones_bgit directory and run the install script from within that directory instead.
+
+### On Usage with Github API
+
+bgit has features contained within its init and delete scripts that utilize the Github API. In order to utilize these features, you must have a personal access token generated and stored as an environment variable within your home directory. Please see Github's [documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on generating a personal access token. Once you have generated this token, you'll need to store it in a file in your home directory called .gh_pat like so:
+
+`echo GH_TOKEN=your_personal_access_token_goes_here > ~/.gh_pat`
 
 [^1]: bgit's .gitignore selection currently only support C, Javascript, and Python, for a full list of default .gitignores, please see the [github page](https://github.com/github/gitignore).
 
