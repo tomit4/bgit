@@ -174,7 +174,7 @@ function bgit() {
                 fi
                 ;;
             d)
-                if [[ $numrepos -eq 0 && $numargs -eq 0 ]]; then
+                if [[ $numrepos -eq 0 ]]; then
                     echo "${txtred}✗ no git repository found, exiting bgit ...${txtwhite}"
                     exit 1
                 else
@@ -183,7 +183,7 @@ function bgit() {
                 fi
                 ;;
             r)
-                if [[ $numrepos -eq 0 && $numargs -eq 0 ]]; then
+                if [[ $numrepos -eq 0 ]]; then
                     echo "${txtred}✗ no git repository found, exiting bgit ...${txtwhite}"
                     exit 1
                 else
@@ -192,7 +192,7 @@ function bgit() {
                 fi
                 ;;
             l)
-                if [[ $numrepos -eq 0 && $numargs -eq 0 ]]; then
+                if [[ $numrepos -eq 0 ]]; then
                     echo "${txtred}✗ no git repository found, exiting bgit ...${txtwhite}"
                     exit 1
                 else

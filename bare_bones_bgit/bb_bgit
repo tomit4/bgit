@@ -114,7 +114,7 @@ function bgit() {
         b_init "$@"
     fi
 
-    while getopts "irlh" opt ; do
+    while getopts "irlhd" opt ; do
         case $opt in
             i)
                 if [[ $numrepos -eq 0 ]]; then
@@ -126,13 +126,32 @@ function bgit() {
                     exit 0
                 fi
                 ;;
+            d)
+                if [[ $numrepos -eq 0  ]]; then
+                    echo "no git repository found, exiting bgit ..."
+                    exit 1
+                else
+                    source $HOME/.config/bgit/bgit_delete
+                    b_check "$@"
+                fi
+                ;;
             r)
-                source $HOME/.config/bgit/bgit_revert
-                b_revert "$@"
+                if [[ $numrepos -eq 0  ]]; then
+                    echo "no git repository found, exiting bgit ..."
+                    exit 1
+                else
+                    source $HOME/.config/bgit/bgit_revert
+                    b_revert "$@"
+                fi
                 ;;
             l)
-                source $HOME/.config/bgit/bgit_log
-                b_log "$@"
+                if [[ $numrepos -eq 0  ]]; then
+                    echo "no git repository found, exiting bgit ..."
+                    exit 1
+                else
+                    source $HOME/.config/bgit/bgit_log
+                    b_log "$@"
+                fi
                 ;;
             h)
                 source $HOME/.config/bgit/bgit_help
