@@ -6,6 +6,7 @@ bgit \- the beginner's git
 .SH SYNOPSIS
 .B bgit
 [\fB\-i\fR]
+[\fB\-d\fR]
 [\fB\-l\fR]
 [\fB\-r\fR]
 [\fB\-h\fR]
