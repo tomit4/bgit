@@ -1,0 +1,12 @@
+#!/bin/bash
+
+function b_help() {
+    echo -e "Usage: bgit <optional flags>"
+    echo -e "Description: bgit is a simple shell script that displays\n  a series of prompts to automate some of the everyday git process."
+    echo -e "\nOptions and Arguments:"
+    echo -e "bgit\t\t\tprompts for git add, git commit -m, and git push"
+    echo -e "bgit -i \t\tprompts to initialize repository"
+    echo -e "bgit -l \t\tprompts to show log of previous commits"
+    echo -e "bgit -r \t\tprompts to revert back to an old commit"
+    echo -e "bgit -h \t\tpresents this help message"
+}

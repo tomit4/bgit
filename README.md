@@ -46,6 +46,10 @@ bgit makes heavy use of emojis in its prompts as well as colors displayed by inv
 
 bgit is a simple bash script, and thusly relies on many of the standard GNU and Linux utils, including grep, awk, tr, read, and less, and of course git. bgit also relies on curl and xclip for some of its more nuanced features (like initializing a new repository on Github via the github-cli). Lastly, bgit also optionally utilizes bat and legit. Utilize your best judgement and install these various packages via your favorite package manager(s) as you see fit. Most of these packages are preinstalled on the majority of Linux Distributions and are otherwise easily installed.
 
+### Bare Bones bgit
+
+There is a bare bones version of bgit included in this repository. This version omits colorized output, devicons, gitmojis, and does not suppress certain outputs (it also does not remember you password for an hour). To install this version of bgit, simply navigate into the bare_bones_bgit directory and run the install script from within that directory instead.
+
 __Project Checklist:__
 
 - [x] Initial Commit
@@ -56,7 +60,7 @@ __Project Checklist:__
 - [x] Create uninstall script
 - [x] Create a git log script (very similar to -r flag)
 - [x] Update README to include usage/configuration
-- [ ] Create a barebones version of bgit without colors, suppressed output, and icons
+- [x] Create a barebones version of bgit without colors, suppressed output, and icons
 - [ ] Update README to include examples/pics/gifs
 
 [^1]: bgit's .gitignore selection currently only support C, Javascript, and Python, for a full list of default .gitignores, please see the [github page](https://github.com/github/gitignore).

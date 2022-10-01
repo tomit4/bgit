@@ -1,0 +1,150 @@
+#!/bin/bash
+
+# Error handling
+set -e
+set -o noclobber
+
+# For styling/colorizing output
+
+# Dependency check
+function dependencycheck() {
+    numdependencies="$#"
+    dependencies=("$@")
+    missingdependencies=0
+
+    for ((i = 0; i < numdependencies; i++)) ; do
+        if ! command -v "${dependencies[$i]}" &> /dev/null ; then
+            echo "dependency not met: ${dependencies[$i]}"
+            missingdependencies=$((missingdependencies+1))
+        fi
+    done
+
+    if [ $missingdependencies -gt 0 ] ; then
+        echo "Please install needed dependencies"
+        exit 1
+    fi
+}
+
+dependencycheck git
+
+function bgit() {
+
+    numrepos=$(git remote | wc -l)
+    numargs="$#"
+    # args=("$@")
+
+    if [[ $numargs -ge 2 ]] ; then
+        echo "Improper usage!!"
+        echo "Simply type bgit if this is a git repository"
+        echo "Or type -h or --help for help"
+        exit 1
+    fi
+
+    if [[ $numrepos -ge 1 && $numargs -eq 0 ]]; then
+        dependencycheck grep awk tr
+
+        remotearray=($(git remote))
+        newfiles=$(git status --short | grep '??' | awk '{print $2}' | tr '\n' ' ')
+        modified=$(git status | grep modified | awk '{print $2}' | tr '\n' ' ')
+        deleted=$(git status | grep deleted | awk '{print $2}' | tr '\n' ' ')
+
+        if [[ -n $newfiles || -n $modified || -n $deleted ]] ; then
+            echo "The following files are staged for commit:"
+        else
+            echo "everything up-to-date...exiting bgit"
+            exit 0
+        fi
+
+        if [[ $newfiles ]]; then
+            echo "ADDED: $newfiles"
+        fi
+        if [[ $modified ]]; then
+            echo "MODIFIED: $modified"
+        fi
+        if [[ $deleted ]]; then
+            echo "DELETED: $deleted"
+        fi
+
+        while true
+        do
+            dependencycheck read
+            read -e -r -p "commit changes?(y/n): " change
+            if [[ $change == "y" || $change == "yes" ]] ; then
+
+                while true
+                do
+                    read -e -r -p "commit message: " message
+                    cmessage=("$message")
+                    cmessage="$(tr '[:lower:]' '[:upper:]' <<< ${cmessage:0:1})${cmessage:1}"
+                    if [ "${#message}" -ge 51 ] ; then
+                        echo "commit message is too large!"
+                        echo "please limit to 50 or less characters"
+                    elif [ -n "$message" ] ; then
+                        break
+                    else
+                        echo "commit message is empty, please write a commit message"
+                        echo "or type 'CTRL+C' to quit"
+                    fi done
+
+                if [[ $newfiles || $modified ]] ; then
+                    git config advice.addEmptyPathspec false;
+                    git add $modified $newfiles
+                fi
+
+                git commit -m "$cmessage"
+                for ((i = 0; i < numrepos; i++)) ; do
+                    git push --force ${remotearray[i]}
+                done
+                exit 0
+
+            elif [[ $change == "n" || $change == "no" ]] ; then
+                git status --short
+                echo "no changes committed"
+                exit 0
+            elif [[ $change == "q" || $change == "quit" ]] ; then
+                exit 0
+            else
+                echo "please enter y or n or type 'q' or 'quit' or 'CTRL+C' to quit"
+            fi
+        done
+
+    elif [[ $numrepos -eq 0 && $numargs -eq 0 ]]; then
+        echo "no git repository found, executing git init..."
+        source $HOME/.config/bgit/bgit_init
+        b_init "$@"
+    fi
+
+    while getopts "irlh" opt ; do
+        case $opt in
+            i)
+                if [[ $numrepos -eq 0 && $numargs -eq 0 ]]; then
+                    echo "no git repository found, executing git init..."
+                    source $HOME/.config/bgit/bgit_init
+                    b_init "$@"
+                else
+                    echo "git repository already exists, exiting bgit..."
+                    exit 0
+                fi
+                ;;
+            r)
+                source $HOME/.config/bgit/bgit_revert
+                b_revert "$@"
+                ;;
+            l)
+                source $HOME/.config/bgit/bgit_log
+                b_log "$@"
+                ;;
+            h)
+                source $HOME/.config/bgit/bgit_help
+                b_help "$@"
+                ;;
+            *)
+                echo "flag not recognized..."
+                echo "bgit exiting..."
+                exit 1
+                ;;
+        esac
+    done
+}
+
+bgit "$@"
