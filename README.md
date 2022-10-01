@@ -22,7 +22,7 @@ bgit also comes with an uninstall script, repeat the above commands above to uni
 
 `bgit`
 
-Invoking bgit without any arguments will automatically prompt the user to stage your recent changes for commits if there are any and, of course, if a local git repository has already been initiated. If a local .git directory is not found (i.e., a git repository was never initiated), then bgit will prompt the user if they'd like to initiate a repository in this directory (this can also be done by invoking bgit with the -i flag).
+Invoking bgit without any arguments will automatically prompt the user to stage your recent changes for commits if there are any and, of course, if a local git repository has already been initiated. If a local .git directory is not found (i.e., a git repository was never initiated), then bgit will prompt the user if they'd like to initiate a repository in this directory (this can also be done by invoking bgit with the -i flag). bgit recursively checks for the presence of multiple remotes, and will commit changes to each of them automatically.
 
 `bgit -i`
 
