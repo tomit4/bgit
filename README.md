@@ -8,7 +8,7 @@ bgit is a git automation tool written in bash. It is designed to quickly automat
 
 bgit is packaged with an installation script for your convenience (this installation script does require root privileges, so please review it carefully before executing it).
 
-You'll need change the permissions on the install script in order to execute it:
+You'll need to change the permissions on the install script in order to execute it:
 
 `chmod +x ./install.sh`
 
