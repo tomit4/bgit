@@ -28,6 +28,10 @@ Invoking bgit without any arguments will automatically prompt the user to stage 
 
 Invoking bgit with the -i flag will prompt the user to initialize a new local git repository and proceeds to set up some sane defaults while attempting to not be too opinionated about it. This init script prompts the user if they'd like to set up a very bare bones README, a default .gitignore [^1], as well as a default LICENSE [^2]. The script will also create the initial commit for the project and push it to whatever repository the user inputs. Additionally, if the project is to be pushed to Github, the repository can be initiated remotely utilizing Github's API (this feature may soon be deprecated depending on Github and their decisions regarding their API).
 
+`bgit -d`
+
+Invoking bgit with the -d flag will prompt the user if they would like to delete the repository. This script interfaces soley with the Github API and will NOT work with other software development hosting services. When invoked, it will proceed to ask a series of prompts needed to remotely delete a Github repository.
+
 `bgit -l`
 
 Invoking bgit with the -l flag will prompt the user to input how many previous commits they would like to review. This is essentially a very abreviated version of git log.
