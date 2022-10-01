@@ -6,6 +6,7 @@ function b_help() {
     echo -e "\nOptions and Arguments:"
     echo -e "bgit\t\t\tprompts for git add, git commit -m, and git push"
     echo -e "bgit -i \t\tprompts to initialize repository"
+    echo -e "bgit -d \t\tprompts to delete repository(github only)"
     echo -e "bgit -l \t\tprompts to show log of previous commits"
     echo -e "bgit -r \t\tprompts to revert back to an old commit"
     echo -e "bgit -h \t\tpresents this help message"
