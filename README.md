@@ -54,7 +54,7 @@ bgit is a simple bash script, and thusly relies on many of the standard GNU and 
 
 ### Bare Bones bgit
 
-There is a bare bones version of bgit included in this repository. This version omits colorized output, devicons, gitmojis, and does not suppress certain outputs. To install this version of bgit, simply navigate into the bare_bones_bgit directory and run the install script from within that directory instead.
+There is a bare bones version of bgit included in this repository. This version omits colorized output, devicons, gitmojis, and does not suppress certain outputs. To install this version of bgit, simply navigate into the bare_bones_bgit directory and modify/run the install script from within that directory instead.
 
 ### On Usage with Github API
 
