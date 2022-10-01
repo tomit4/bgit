@@ -62,6 +62,11 @@ bgit has features contained within its init and delete scripts that utilize the 
 
 `echo "GH_TOKEN=your_personal_access_token_goes_here" > ~/.gh_pat`
 
+__CheckList__
+
+- [ ] Write up an anticipated FAQ (to address why I created this)
+- [ ] Create a List of similar projects
+
 [^1]: bgit's .gitignore selection currently only support C, Javascript, and Python, for a full list of default .gitignores, please see the [github page](https://github.com/github/gitignore).
 
 [^2]: bgit utilizes captainsafia's [legit](https://github.com/captainsafia/legit) to generate default LICENSES
