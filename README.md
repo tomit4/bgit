@@ -67,4 +67,4 @@ __Project Checklist:__
 
 [^2]: bgit utilizes captainsafia's [legit](https://github.com/captainsafia/legit) to generate default LICENCES
 
-[^3]: If you'd like to install devicons, please visit the [github page](https://github.com/vorillaz/devicons). If you'd rather not install devicons, I will be providing a more barebones version of bgit in the near future.
+[^3]: If you'd like to install devicons, please visit the [github page](https://github.com/vorillaz/devicons). If you'd rather not install devicons, use the barebones version of bgit instead.
