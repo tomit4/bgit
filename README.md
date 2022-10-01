@@ -66,4 +66,4 @@ bgit has features contained within its init and delete scripts that utilize the 
 
 [^2]: bgit utilizes captainsafia's [legit](https://github.com/captainsafia/legit) to generate default LICENSES
 
-[^3]: If you'd like to install devicons, please visit the [github page](https://github.com/vorillaz/devicons). If you'd rather not install devicons, use the barebones version of bgit instead.
+[^3]: If you'd like to install devicons, please visit [vorillaz's github page](https://github.com/vorillaz/devicons). If you'd rather not install devicons, use the barebones version of bgit instead.
