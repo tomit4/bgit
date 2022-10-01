@@ -62,10 +62,14 @@ bgit has features contained within its init and delete scripts that utilize the 
 
 `echo "GH_TOKEN=your_personal_access_token_goes_here" > ~/.gh_pat`
 
-__CheckList__
+### Why did you make this?
 
-- [ ] Write up an anticipated FAQ (to address why I created this)
-- [ ] Create a List of similar projects
+I created bgit simply for educational purposes(learn bash scripting, how to write a man page, learn about basic git workflow). It certainly isn't nearly as fully featured as other cli tools like [lazygit](https://github.com/jesseduffield/lazygit). bgit does not integrate features like git diff, git rebase/merge. I do use bgit myself on a daily basis as it fulfills my extremely basic needs at this time, and I might consider expanding its feature set to become more akin to other git tui projects as I learn more.
+
+### Better Git Tools
+
+- [gitui](https://github.com/Extrawurst/gitui)
+- [lazygit](https://github.com/jesseduffield/lazygit)
 
 [^1]: bgit's .gitignore selection currently only support C, Javascript, and Python, for a full list of default .gitignores, please see the [github page](https://github.com/github/gitignore).
 
