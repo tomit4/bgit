@@ -58,7 +58,7 @@ There is a bare bones version of bgit included in this repository. This version 
 
 ### On Usage with Github API
 
-bgit has features contained within its init and delete scripts that utilize the Github API. In order to utilize these features, you must have a personal access token generated and stored as an environment variable within your home directory. Please see Github's [documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on generating a personal access token. Once you have generated this token, you'll need to store it in a file in your home directory called .gh_pat like so:
+bgit has features contained within its init and delete scripts that utilize the Github API. In order to utilize these features, you must have a personal access token generated and stored as an environment variable referenced within a file in home directory. Please see Github's [documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on generating a personal access token. Once you have generated this token, you'll need to store it in a file in your home directory called .gh_pat like so:
 
 `echo "GH_TOKEN=your_personal_access_token_goes_here" > ~/.gh_pat`
 
