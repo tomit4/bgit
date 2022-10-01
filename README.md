@@ -50,19 +50,6 @@ bgit is a simple bash script, and thusly relies on many of the standard GNU and 
 
 There is a bare bones version of bgit included in this repository. This version omits colorized output, devicons, gitmojis, and does not suppress certain outputs (it also does not remember you password for an hour). To install this version of bgit, simply navigate into the bare_bones_bgit directory and run the install script from within that directory instead.
 
-__Project Checklist:__
-
-- [x] Initial Commit
-- [x] Organize files so that they source from a common directory (i.e $HOME/config)
-- [x] Create a --help Flag feature/message
-- [x] Create a man page for bgit using troff
-- [x] Create install script
-- [x] Create uninstall script
-- [x] Create a git log script (very similar to -r flag)
-- [x] Update README to include usage/configuration
-- [x] Create a barebones version of bgit without colors, suppressed output, and icons
-- [ ] Update README to include examples/pics/gifs
-
 [^1]: bgit's .gitignore selection currently only support C, Javascript, and Python, for a full list of default .gitignores, please see the [github page](https://github.com/github/gitignore).
 
 [^2]: bgit utilizes captainsafia's [legit](https://github.com/captainsafia/legit) to generate default LICENCES
