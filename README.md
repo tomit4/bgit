@@ -64,6 +64,6 @@ bgit has features contained within its init and delete scripts that utilize the 
 
 [^1]: bgit's .gitignore selection currently only support C, Javascript, and Python, for a full list of default .gitignores, please see the [github page](https://github.com/github/gitignore).
 
-[^2]: bgit utilizes captainsafia's [legit](https://github.com/captainsafia/legit) to generate default LICENCES
+[^2]: bgit utilizes captainsafia's [legit](https://github.com/captainsafia/legit) to generate default LICENSES
 
 [^3]: If you'd like to install devicons, please visit the [github page](https://github.com/vorillaz/devicons). If you'd rather not install devicons, use the barebones version of bgit instead.
