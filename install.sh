@@ -20,7 +20,7 @@ function installbgit() {
             doas cp bgit /usr/local/bin/
             doas chmod 755 /usr/local/bin/bgit
         else
-            sudo chmod 755 bgit
+            sudo cp bgit /usr/local/bin/
             sudo chmod 755 /usr/local/bin/bgit
         fi
     else
