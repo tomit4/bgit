@@ -117,7 +117,7 @@ function bgit() {
     while getopts "irlh" opt ; do
         case $opt in
             i)
-                if [[ $numrepos -eq 0 && $numargs -eq 0 ]]; then
+                if [[ $numrepos -eq 0 ]]; then
                     echo "no git repository found, executing git init..."
                     source $HOME/.config/bgit/bgit_init
                     b_init "$@"
