@@ -21,6 +21,9 @@ By default, and when invoked with no flags/options, bgit will look for all files
 .BR \-i
 initialize a new repository in current directory
 .TP
+.BR \-d
+remotely delete the repository in current directory (github only)
+.TP
 .BR \-l
 display previous commit log messages
 .TP
