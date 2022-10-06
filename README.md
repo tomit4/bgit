@@ -71,6 +71,18 @@ I created bgit simply for educational purposes(learn bash scripting, how to writ
 - [gitui](https://github.com/Extrawurst/gitui)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 
+__To Be Implemented Next:__
+
+ - [ ] Replace all function() references with simple declarations (i.e. bgit() {})
+ - [ ] Replace all echo invokations with printf statements
+ - [ ] Remove all set -e
+ - [ ] When using if() with an arithmetic comparison (i.e. -gt), use (()) instead of []
+ - [ ] Replace all while true \n do with while true; do (one line)
+ - [ ] Consider reading the man page of read (specifically the flag of -n)
+ - [ ] Replace all y/yes inputs with a case statement instead of an if statement
+ - [ ] Create a function called err_out() { printf -- '%ss\n' "${txtred}x ${*}" >&2 } for use on error
+ - [ ] Change function bgit to function main() (follows proper standards)
+
 [^1]: bgit's .gitignore selection currently only support C, Javascript, and Python, for a full list of default .gitignores, please see the [github page](https://github.com/github/gitignore).
 
 [^2]: bgit utilizes captainsafia's [legit](https://github.com/captainsafia/legit) to generate default LICENSES
