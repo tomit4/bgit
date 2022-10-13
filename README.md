@@ -93,6 +93,13 @@ __Other Recommended Implementations:__
 - [ ] Consider removing the --force in your push command, or at least add push --force --lease (least?)
 - [ ] Consider not requiring less, but rather defaulting to cat
 - [ ] Perhaps the -h/help flag could just bring the user to the man page?
+- [ ] In checkmojii, bash can check an array for a string, this doesn't have to be a whole switich/case statement
+- [ ] For echomoji, see bash associative array
+- [ ] The git log command has its own formatting output, research this and consider how to implement (or archive feature as irrelevant)
+
+__Big If Features to consider__
+- [ ] Add a merge option with average behavior for personal projects
+- [ ] Add a git blame option (more basic version of tig)
 
 [^1]: bgit's .gitignore selection currently only support C, Javascript, and Python, for a full list of default .gitignores, please see the [github page](https://github.com/github/gitignore).
 
