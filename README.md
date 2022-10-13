@@ -83,6 +83,17 @@ __To Be Implemented Next:__
  - [ ] Create a function called err_out() { printf -- '%ss\n' "${txtred}x ${*}" >&2 } for use on error
  - [ ] Change function bgit to function main() (follows proper standards)
 
+__Other Recommended Implementations:__
+
+- [ ] Consider areas where the for((;;)) loop is excessive, see iterating over the array directly
+- [ ] In the init.sh, offer up options for the configuration of their global git config
+- [ ] Pay attention to where you used $# vs $numargs, there is an opportunity for improvement here
+- [ ] Instead of using an array grep/sed/awked from the command, consider using wc to count remotes from the git config
+- [ ] Use grep/sed/awk on git diff to get a list of staged files (unalias difftastic for this)
+- [ ] Consider removing the --force in your push command, or at least add push --force --lease (least?)
+- [ ] Consider not requiring less, but rather defaulting to cat
+- [ ] Perhaps the -h/help flag could just bring the user to the man page?
+
 [^1]: bgit's .gitignore selection currently only support C, Javascript, and Python, for a full list of default .gitignores, please see the [github page](https://github.com/github/gitignore).
 
 [^2]: bgit utilizes captainsafia's [legit](https://github.com/captainsafia/legit) to generate default LICENSES
