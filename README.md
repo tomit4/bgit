@@ -20,27 +20,39 @@ bgit also comes with an uninstall script, repeat the above commands above to uni
 
 ### Basic Usage
 
-`bgit`
+``````
+bgit
+``````
 
 Invoking bgit without any arguments will automatically prompt the user to stage your recent changes for commits if there are any and, of course, if a local git repository has already been initiated. bgit recursively checks for the presence of multiple remotes, and will commit changes to each of them automatically. If a local .git directory is not found (i.e., a git repository was never initiated), then bgit will prompt the user if they'd like to initiate a repository in this directory (this can also be done by invoking bgit with the -i flag).
 
-`bgit -i`
+``````
+bgit -i
+``````
 
 Invoking bgit with the -i flag will prompt the user to initialize a new local git repository and proceeds to set up some sane defaults while attempting to not be too opinionated about it. This init script prompts the user if they'd like to set up a very bare bones README, a default .gitignore [^1], as well as a default LICENSE [^2]. The script will also create the initial commit for the project and push it to whatever repository the user inputs. Additionally, if the project is to be pushed to Github, the repository can be initiated remotely utilizing Github's API.
 
-`bgit -d`
+``````
+bgit -d
+``````
 
 Invoking bgit with the -d flag will prompt the user if they would like to delete the repository. This script interfaces soley with the Github API and will NOT work with other software development hosting services. When invoked, it will proceed to ask a series of prompts needed to remotely delete a Github repository.
 
-`bgit -l`
+``````
+bgit -l
+``````
 
 Invoking bgit with the -l flag will prompt the user to input how many previous commits they would like to review. This is essentially a very abreviated version of git log.
 
-`bgit -r`
+``````
+bgit -r
+``````
 
 Invoking bgit with the -r flag will prompt the user to input how many previous commits they would like to review for the purposes of reverting back to one of these previous commits.
 
-`bgit -h`
+``````
+bgit -h
+``````
 
 Invoking bgit with the -h flag will provide the user with a standard help page about basic usage of this script.
 
