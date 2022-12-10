@@ -1,6 +1,6 @@
 #!/bin/bash
 function b_init() {
-    while true
+    while :
     do
     #Prompts the user if they'd like to initialize repository
     read -e -r -p "${txtblue} initialize repository?(y/n): ${txtyellow}" init
@@ -9,7 +9,7 @@ function b_init() {
             break
         elif [[ $init == "y" || $init == "yes" ]] ; then
 
-            while true
+            while :
             do
                 read -e -r -p "${txtblue} please enter title of your project: ${txtyellow}" projectname
                 if [[ $projectname != "" ]] ; then
@@ -68,7 +68,7 @@ function b_init() {
             done
 
             # prompt user if they'd like to generate a license
-            while true
+            while :
             do
                 read -e -r -p "${txtblue} would you like to generate a LICENSE?(y/n/help): ${txtyellow}" confirmlegit
                 if [[ $confirmlegit == "y" || $confirmlegit == "yes" ]] ; then
@@ -95,7 +95,7 @@ function b_init() {
             git commit -m ":tada: Initial commit!" > /dev/null 2>&1
             echo "${txtblue} Initial commit!${txtwhite}"
 
-            while true
+            while :
             do
             read -e -r -p "${txtblue} change branch name?(y/n): ${txtyellow}" chbranch
                 if [[ $chbranch == "y" || $chbranch == "yes" ]] ; then
@@ -114,7 +114,7 @@ function b_init() {
             done
 
             # main git init loop
-            while true
+            while :
             do
                 uname=$(git config user.name)
                 read -e -r -p "${txtblue} Please enter remote to add(i.e. origin): ${txtyellow}" remote
