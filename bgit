@@ -22,14 +22,14 @@ function dependencycheck() {
     dependencies=("$@")
     missingdependencies=0
 
-    for ((i = 0; i < numdependencies; i++)) ; do
-        if ! command -v "${dependencies[$i]}" &> /dev/null ; then
+    for ((i = 0; i < numdependencies; i++)); do
+        if ! command -v "${dependencies[$i]}" &>/dev/null; then
             echo "${txtred}✗ dependency not met: ${dependencies[$i]}${txtwhite}"
-            missingdependencies=$((missingdependencies+1))
+            missingdependencies=$((missingdependencies + 1))
         fi
     done
 
-    if [ $missingdependencies -gt 0 ] ; then
+    if [ $missingdependencies -gt 0 ]; then
         echo "${txtred}✗ Please install needed dependencies${txtwhite}"
         exit 1
     fi
@@ -37,7 +37,8 @@ function dependencycheck() {
 
 dependencycheck git
 
-tput bold & tput setaf 7
+tput bold &
+tput setaf 7
 
 function bgit() {
 
@@ -45,7 +46,7 @@ function bgit() {
     numargs="$#"
     # args=("$@")
 
-    if [[ $numargs -ge 2 ]] ; then
+    if [[ $numargs -ge 2 ]]; then
         echo "${txtred}✗ Improper usage!!"
         echo "${txtred}✗ Simply type bgit if this is a git repository"
         echo "${txtred}✗ Or type -h or --help for help"
@@ -60,7 +61,7 @@ function bgit() {
         modified=$(git status | grep modified | awk '{print $2}' | tr '\n' ' ')
         deleted=$(git status | grep deleted | awk '{print $2}' | tr '\n' ' ')
 
-        if [[ -n $newfiles || -n $modified || -n $deleted ]] ; then
+        if [[ -n $newfiles || -n $modified || -n $deleted ]]; then
             echo "${txtgreen} The following files are staged for commit:"
         else
             echo "${txtgreen}✓ everything up-to-date...exiting bgit${txtwhite}"
@@ -68,32 +69,30 @@ function bgit() {
         fi
 
         if [[ $newfiles ]]; then
-            echo "${txtgreen} ADDED: ${txtgreen}$newfiles"
+            echo "${txtgreen}➕ ADDED: ${txtgreen}$newfiles"
         fi
         if [[ $modified ]]; then
-            echo "${txtblue}פֿ MODIFIED: ${txtblue}$modified"
+            echo "${txtblue} MODIFIED: ${txtblue}$modified"
         fi
         if [[ $deleted ]]; then
             echo "${txtred}✗ DELETED: ${txtred}$deleted"
         fi
 
-        while true
-        do
+        while true; do
             dependencycheck read
             read -e -r -p "${txtblue} commit changes?(y/n): ${txtyellow}" change
-            if [[ $change == "y" || $change == "yes" ]] ; then
+            if [[ $change == "y" || $change == "yes" ]]; then
 
                 mojicheck=1
-                while [ $mojicheck -gt 0 ]
-                do
+                while [ $mojicheck -gt 0 ]; do
                     read -e -r -p "${txtblue} add a gitmoji?(y/n/help): ${txtyellow}" gmojiprompt
-                    if [[ $gmojiprompt == "y" || $gmojiprompt == "yes" ]] ; then
+                    if [[ $gmojiprompt == "y" || $gmojiprompt == "yes" ]]; then
                         read -e -r -p "${txtblue} enter gitmoji: ${txtyellow}" gitmoji
                         gitmoji=":$gitmoji:"
                         source $HOME/.config/bgit/bgit_checkmoji
                         checkmoji $gitmoji
-                    elif [[ $gmojiprompt == "help" || $gmojiprompt == "h" ]] ; then
-                        if command -v "bat" &> /dev/null ; then
+                    elif [[ $gmojiprompt == "help" || $gmojiprompt == "h" ]]; then
+                        if command -v "bat" &>/dev/null; then
                             bat $HOME/.config/bgit/gitmojis
                         else
                             dependencycheck less
@@ -105,49 +104,51 @@ function bgit() {
                     fi
                 done
 
-                while true
-                do
-                    read -e -r -p "${txtblue} commit message: ${txtyellow}" message
+                while true; do
+                    read -e -r -p "${txtblue} commit message: ${txtyellow}" message
                     cmessage=("$message")
-                    cmessage="$(tr '[:lower:]' '[:upper:]' <<< ${cmessage:0:1})${cmessage:1}"
-                    if [ "${#message}" -ge 51 ] ; then
+                    cmessage="$(tr '[:lower:]' '[:upper:]' <<<${cmessage:0:1})${cmessage:1}"
+                    if [ "${#message}" -ge 51 ]; then
                         echo "${txtred}✗  commit message is too large!"
                         echo "${txtred}✗ please limit to 50 or less characters${txtwhite}"
-                    elif [ -n "$message" ] ; then
+                    elif [ -n "$message" ]; then
                         break
                     else
                         echo "${txtred}✗ commit message is empty, please write a commit message"
                         echo "${txtred}✗ or type 'CTRL+C' to quit${txtwhite}"
-                    fi done
+                    fi
+                done
 
-                tput bold & tput setaf 7
+                tput bold &
+                tput setaf 7
 
-                if [[ $newfiles || $modified ]] ; then
-                    git config credential.helper 'cache --timeout=3600';
-                    git config advice.addEmptyPathspec false;
-                    git add $modified $newfiles > /dev/null 2>&1
+                if [[ $newfiles || $modified ]]; then
+                    git config credential.helper 'cache --timeout=3600'
+                    git config advice.addEmptyPathspec false
+                    git add $modified $newfiles >/dev/null 2>&1
                 fi
 
-                git commit -m "$gitmoji $cmessage" > /dev/null 2>&1;
-                if [[ "$gitmoji" != "" ]] ; then
+                git commit -m "$gitmoji $cmessage" >/dev/null 2>&1
+                if [[ "$gitmoji" != "" ]]; then
                     source $HOME/scripts/bgit_echomoji
                     echomoji $gitmoji
                 else
                     echo "${txtblue}$cmessage${txtwhite}"
                 fi
-                for ((i = 0; i < numrepos; i++)) ; do
-                    git push --force ${remotearray[i]} > /dev/null 2>&1;
+                for ((i = 0; i < numrepos; i++)); do
+                    git push --force ${remotearray[i]} >/dev/null 2>&1
                 done
                 exit 0
 
-            elif [[ $change == "n" || $change == "no" ]] ; then
-                tput bold & tput setaf 7
+            elif [[ $change == "n" || $change == "no" ]]; then
+                tput bold &
+                tput setaf 7
 
                 git status --short
                 echo "${txtred}✗ no changes committed"
                 exit 0
 
-            elif [[ $change == "q" || $change == "quit" ]] ; then
+            elif [[ $change == "q" || $change == "quit" ]]; then
                 exit 0
 
             else
@@ -161,54 +162,54 @@ function bgit() {
         b_init "$@"
     fi
 
-    while getopts "irlhd" opt ; do
+    while getopts "irlhd" opt; do
         case $opt in
-            i)
-                if [[ $numrepos -eq 0 ]]; then
-                    echo "${txtgreen} no git repository found, executing git init...${txtwhite}"
-                    source $HOME/.config/bgit/bgit_init
-                    b_init "$@"
-                else
-                    echo "${txtred}✗ git repository already exists, exiting bgit...${txtwhite}"
-                    exit 0
-                fi
-                ;;
-            d)
-                if [[ $numrepos -eq 0 ]]; then
-                    echo "${txtred}✗ no git repository found, exiting bgit ...${txtwhite}"
-                    exit 1
-                else
-                    source $HOME/.config/bgit/bgit_delete
-                    b_check "$@"
-                fi
-                ;;
-            r)
-                if [[ $numrepos -eq 0 ]]; then
-                    echo "${txtred}✗ no git repository found, exiting bgit ...${txtwhite}"
-                    exit 1
-                else
-                    source $HOME/.config/bgit/bgit_revert
-                    b_revert "$@"
-                fi
-                ;;
-            l)
-                if [[ $numrepos -eq 0 ]]; then
-                    echo "${txtred}✗ no git repository found, exiting bgit ...${txtwhite}"
-                    exit 1
-                else
-                    source $HOME/.config/bgit/bgit_log
-                    b_log "$@"
-                fi
-                ;;
-            h)
-                source $HOME/.config/bgit/bgit_help
-                b_help "$@"
-                ;;
-            *)
-                echo "${txtred}✗ flag not recognized...${txtwhite}"
-                echo "${txtred}✗ bgit exiting...${txtwhite}"
+        i)
+            if [[ $numrepos -eq 0 ]]; then
+                echo "${txtgreen} no git repository found, executing git init...${txtwhite}"
+                source $HOME/.config/bgit/bgit_init
+                b_init "$@"
+            else
+                echo "${txtred}✗ git repository already exists, exiting bgit...${txtwhite}"
+                exit 0
+            fi
+            ;;
+        d)
+            if [[ $numrepos -eq 0 ]]; then
+                echo "${txtred}✗ no git repository found, exiting bgit ...${txtwhite}"
                 exit 1
-                ;;
+            else
+                source $HOME/.config/bgit/bgit_delete
+                b_check "$@"
+            fi
+            ;;
+        r)
+            if [[ $numrepos -eq 0 ]]; then
+                echo "${txtred}✗ no git repository found, exiting bgit ...${txtwhite}"
+                exit 1
+            else
+                source $HOME/.config/bgit/bgit_revert
+                b_revert "$@"
+            fi
+            ;;
+        l)
+            if [[ $numrepos -eq 0 ]]; then
+                echo "${txtred}✗ no git repository found, exiting bgit ...${txtwhite}"
+                exit 1
+            else
+                source $HOME/.config/bgit/bgit_log
+                b_log "$@"
+            fi
+            ;;
+        h)
+            source $HOME/.config/bgit/bgit_help
+            b_help "$@"
+            ;;
+        *)
+            echo "${txtred}✗ flag not recognized...${txtwhite}"
+            echo "${txtred}✗ bgit exiting...${txtwhite}"
+            exit 1
+            ;;
         esac
     done
 }
