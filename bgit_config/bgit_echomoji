@@ -6,225 +6,225 @@ set -e
 function echomoji() {
     gitmoji=$1
     case $gitmoji in
-        ":art:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":zap:")
-            echo "${txtblue}⚡️$cmessage${txtwhite}"
-            ;;
-        ":fire:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":bug:")
-            echo "${txtblue}ﴫ $cmessage${txtwhite}"
-            ;;
-        ":ambulance:")
-            echo "${txtblue}🚑️ $cmessage${txtwhite}"
-            ;;
-        ":sparkles:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":memo:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":rocket:")
-            echo "${txtblue}異 $cmessage${txtwhite}"
-            ;;
-        ":lipstick:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":tada:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":white_check_mark:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":lock:")
-            echo "${txtblue}🔒️ $cmessage${txtwhite}"
-            ;;
-        ":closed_lock_with_key:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":bookmark:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":rotating_light:")
-            echo "${txtblue}ﲍ $cmessage${txtwhite}"
-            ;;
-        ":construction:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":green_heart")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":arrow_down:")
-            echo "${txtblue}ﰬ $cmessage${txtwhite}"
-            ;;
-        ":arrow_up:")
-            echo "${txtblue}ﰵ $cmessage${txtwhite}"
-            ;;
-        ":pushpin:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":construction_worker:")
-            echo "${txtblue}華 $cmessage${txtwhite}"
-            ;;
-        ":chart_with_upwards_trend:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":recycle:")
-            echo "${txtblue}屢 $cmessage${txtwhite}"
-            ;;
-        ":heavy_plus_sign:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":heavy_minus_sign:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":wrench:")
-            echo "${txtblue}襁 $cmessage${txtwhite}"
-            ;;
-        ":hammer:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":globe_with_meridians:")
-            echo "${txtblue}🌐 $cmessage${txtwhite}"
-            ;;
-        ":pencil2:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":poop:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":rewind:")
-            echo "${txtblue}⏪️ $cmessage${txtwhite}"
-            ;;
-        ":twisted_rightwards_arrows:")
-            echo "${txtblue}  $cmessage${txtwhite}"
-            ;;
-        ":package:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":alien:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":truck:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":page_facing_up:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":boom:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":bento:")
-            echo "${txtblue}ﳨ $cmessage${txtwhite}"
-            ;;
-        ":wheelchair:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":bulb:")
-            echo "${txtblue}ﯦ $cmessage${txtwhite}"
-            ;;
-        ":beers:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":speech_balloon:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":card_file_box:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":loud_sound:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":mute:")
-            echo "${txtblue}婢 $cmessage${txtwhite}"
-            ;;
-        ":busts_in_silhouette:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":children_crossing:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":building_construction:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":iphone:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":clown_face:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":egg:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":see_no_evil:")
-            echo "${txtblue}  $cmessage${txtwhite}"
-            ;;
-        ":camera_flash:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":alembic:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":mag:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":label:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":seedling:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":triangular_flag_on_post:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":goal_net:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":dizzy:")
-            echo "${txtblue}💫 $cmessage${txtwhite}"
-            ;;
-        ":wastebasket:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":passport_control:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":adhesive_bandages:")
-            echo "${txtblue}🩹 $cmessage${txtwhite}"
-            ;;
-        ":monocole_face:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":coffin:")
-            echo "${txtblue}ﮊ $cmessage${txtwhite}"
-            ;;
-        ":test_tube:")
-            echo "${txtblue}ﭧ $cmessage${txtwhite}"
-            ;;
-        ":necktie:")
-            echo "${txtblue}礼 $cmessage${txtwhite}"
-            ;;
-        ":stethoscope:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":bricks:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":technologist:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":money_with_wings:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        ":thread:")
-            echo "${txtblue} $cmessage${txtwhite}"
-            ;;
-        *)
-            echo "${txtred}✗ gitmoji not recognized, please enter h for help${txtwhite}"
-            echomoji "$@"
-            ;;
+    ":art:")
+        echo "${txtblue}🖌️ $cmessage${txtwhite}"
+        ;;
+    ":zap:")
+        echo "${txtblue}⚡️$cmessage${txtwhite}"
+        ;;
+    ":fire:")
+        echo "${txtblue}🔥 $cmessage${txtwhite}"
+        ;;
+    ":bug:")
+        echo "${txtblue}🐛 $cmessage${txtwhite}"
+        ;;
+    ":ambulance:")
+        echo "${txtblue}🚑️ $cmessage${txtwhite}"
+        ;;
+    ":sparkles:")
+        echo "${txtblue}✨ $cmessage${txtwhite}"
+        ;;
+    ":memo:")
+        echo "${txtblue}📝 $cmessage${txtwhite}"
+        ;;
+    ":rocket:")
+        echo "${txtblue}🚀 $cmessage${txtwhite}"
+        ;;
+    ":lipstick:")
+        echo "${txtblue} $cmessage${txtwhite}"
+        ;;
+    ":tada:")
+        echo "${txtblue}🎉 $cmessage${txtwhite}"
+        ;;
+    ":white_check_mark:")
+        echo "${txtblue}✅ $cmessage${txtwhite}"
+        ;;
+    ":lock:")
+        echo "${txtblue}🔒️ $cmessage${txtwhite}"
+        ;;
+    ":closed_lock_with_key:")
+        echo "${txtblue}🔐 $cmessage${txtwhite}"
+        ;;
+    ":bookmark:")
+        echo "${txtblue}🔖 $cmessage${txtwhite}"
+        ;;
+    ":rotating_light:")
+        echo "${txtblue}🚨 $cmessage${txtwhite}"
+        ;;
+    ":construction:")
+        echo "${txtblue}🚧 $cmessage${txtwhite}"
+        ;;
+    ":green_heart")
+        echo "${txtblue}💚 $cmessage${txtwhite}"
+        ;;
+    ":arrow_down:")
+        echo "${txtblue}⬇️ $cmessage${txtwhite}"
+        ;;
+    ":arrow_up:")
+        echo "${txtblue}⬆️ $cmessage${txtwhite}"
+        ;;
+    ":pushpin:")
+        echo "${txtblue}📌 $cmessage${txtwhite}"
+        ;;
+    ":construction_worker:")
+        echo "${txtblue}👷 $cmessage${txtwhite}"
+        ;;
+    ":chart_with_upwards_trend:")
+        echo "${txtblue}📈 $cmessage${txtwhite}"
+        ;;
+    ":recycle:")
+        echo "${txtblue}♻️ $cmessage${txtwhite}"
+        ;;
+    ":heavy_plus_sign:")
+        echo "${txtblue} $cmessage${txtwhite}"
+        ;;
+    ":heavy_minus_sign:")
+        echo "${txtblue} $cmessage${txtwhite}"
+        ;;
+    ":wrench:")
+        echo "${txtblue}🔧 $cmessage${txtwhite}"
+        ;;
+    ":hammer:")
+        echo "${txtblue}🔨 $cmessage${txtwhite}"
+        ;;
+    ":globe_with_meridians:")
+        echo "${txtblue}🌐 $cmessage${txtwhite}"
+        ;;
+    ":pencil2:")
+        echo "${txtblue} $cmessage${txtwhite}"
+        ;;
+    ":poop:")
+        echo "${txtblue}💩 $cmessage${txtwhite}"
+        ;;
+    ":rewind:")
+        echo "${txtblue}⏪️ $cmessage${txtwhite}"
+        ;;
+    ":twisted_rightwards_arrows:")
+        echo "${txtblue}  $cmessage${txtwhite}"
+        ;;
+    ":package:")
+        echo "${txtblue}📦 $cmessage${txtwhite}"
+        ;;
+    ":alien:")
+        echo "${txtblue}👽 $cmessage${txtwhite}"
+        ;;
+    ":truck:")
+        echo "${txtblue} $cmessage${txtwhite}"
+        ;;
+    ":page_facing_up:")
+        echo "${txtblue}📄 $cmessage${txtwhite}"
+        ;;
+    ":boom:")
+        echo "${txtblue}💥 $cmessage${txtwhite}"
+        ;;
+    ":bento:")
+        echo "${txtblue}🍱 $cmessage${txtwhite}"
+        ;;
+    ":wheelchair:")
+        echo "${txtblue}♿ $cmessage${txtwhite}"
+        ;;
+    ":bulb:")
+        echo "${txtblue}💡 $cmessage${txtwhite}"
+        ;;
+    ":beers:")
+        echo "${txtblue}🍺 $cmessage${txtwhite}"
+        ;;
+    ":speech_balloon:")
+        echo "${txtblue}💬 $cmessage${txtwhite}"
+        ;;
+    ":card_file_box:")
+        echo "${txtblue}📁 $cmessage${txtwhite}"
+        ;;
+    ":loud_sound:")
+        echo "${txtblue}🔉 $cmessage${txtwhite}"
+        ;;
+    ":mute:")
+        echo "${txtblue}🔇 $cmessage${txtwhite}"
+        ;;
+    ":busts_in_silhouette:")
+        echo "${txtblue}👥 $cmessage${txtwhite}"
+        ;;
+    ":children_crossing:")
+        echo "${txtblue} $cmessage${txtwhite}"
+        ;;
+    ":building_construction:")
+        echo "${txtblue}🏢 $cmessage${txtwhite}"
+        ;;
+    ":iphone:")
+        echo "${txtblue}📱 $cmessage${txtwhite}"
+        ;;
+    ":clown_face:")
+        echo "${txtblue}🤡 $cmessage${txtwhite}"
+        ;;
+    ":egg:")
+        echo "${txtblue}🥚 $cmessage${txtwhite}"
+        ;;
+    ":see_no_evil:")
+        echo "${txtblue}🙈 $cmessage${txtwhite}"
+        ;;
+    ":camera_flash:")
+        echo "${txtblue}📸 $cmessage${txtwhite}"
+        ;;
+    ":alembic:")
+        echo "${txtblue}⚗️ $cmessage${txtwhite}"
+        ;;
+    ":mag:")
+        echo "${txtblue}🔍 $cmessage${txtwhite}"
+        ;;
+    ":label:")
+        echo "${txtblue}🏷️ $cmessage${txtwhite}"
+        ;;
+    ":seedling:")
+        echo "${txtblue}🌱 $cmessage${txtwhite}"
+        ;;
+    ":triangular_flag_on_post:")
+        echo "${txtblue}🚩 $cmessage${txtwhite}"
+        ;;
+    ":goal_net:")
+        echo "${txtblue}🥅 $cmessage${txtwhite}"
+        ;;
+    ":dizzy:")
+        echo "${txtblue}💫 $cmessage${txtwhite}"
+        ;;
+    ":wastebasket:")
+        echo "${txtblue}🗑️ $cmessage${txtwhite}"
+        ;;
+    ":passport_control:")
+        echo "${txtblue}🛂 $cmessage${txtwhite}"
+        ;;
+    ":adhesive_bandages:")
+        echo "${txtblue} $cmessage${txtwhite}"
+        ;;
+    ":monocole_face:")
+        echo "${txtblue} $cmessage${txtwhite}"
+        ;;
+    ":coffin:")
+        echo "${txtblue}⚰️ $cmessage${txtwhite}"
+        ;;
+    ":test_tube:")
+        echo "${txtblue}󰙨 $cmessage${txtwhite}"
+        ;;
+    ":necktie:")
+        echo "${txtblue}👔 $cmessage${txtwhite}"
+        ;;
+    ":stethoscope:")
+        echo "${txtblue} $cmessage${txtwhite}"
+        ;;
+    ":bricks:")
+        echo "${txtblue}󱊈 $cmessage${txtwhite}"
+        ;;
+    ":technologist:")
+        echo "${txtblue}󰹑 $cmessage${txtwhite}"
+        ;;
+    ":money_with_wings:")
+        echo "${txtblue}💸 $cmessage${txtwhite}"
+        ;;
+    ":thread:")
+        echo "${txtblue}󱇫 $cmessage${txtwhite}"
+        ;;
+    *)
+        echo "${txtred}✗ gitmoji not recognized, please enter h for help${txtwhite}"
+        echomoji "$@"
+        ;;
     esac
 }
